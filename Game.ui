@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1366</width>
-    <height>768</height>
+    <width>1252</width>
+    <height>860</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="Start">
    <property name="geometry">
     <rect>
-     <x>590</x>
+     <x>520</x>
      <y>720</y>
      <width>181</width>
      <height>41</height>
@@ -34,8 +34,8 @@
   <widget class="QLabel" name="CPU">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>200</y>
+     <x>270</x>
+     <y>350</y>
      <width>31</width>
      <height>21</height>
     </rect>
@@ -52,8 +52,8 @@
   <widget class="QLabel" name="Player">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>200</y>
+     <x>960</x>
+     <y>350</y>
      <width>51</width>
      <height>21</height>
     </rect>
@@ -70,10 +70,10 @@
   <widget class="QLabel" name="CPUview">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>230</y>
-     <width>440</width>
-     <height>360</height>
+     <x>120</x>
+     <y>380</y>
+     <width>330</width>
+     <height>330</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -86,10 +86,10 @@
   <widget class="QLabel" name="Playerview">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>230</y>
-     <width>440</width>
-     <height>360</height>
+     <x>810</x>
+     <y>380</y>
+     <width>330</width>
+     <height>330</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -97,6 +97,130 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Liveview">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>20</y>
+     <width>330</width>
+     <height>330</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CPUScore">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>730</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>CPU Score:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PlayerScore">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>730</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Player Score:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LiveVideoFeed">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>360</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Live Video Feed</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CPUoutput">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>760</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>CPU Output:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Playeroutput">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>760</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Player Output:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Result">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>670</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Result:</string>
    </property>
   </widget>
  </widget>

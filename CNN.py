@@ -1,10 +1,9 @@
-from ImgPrepro import Train,Test,Valid
-#import ImgPrepro
+from ImgPrepro import Train,Valid
 from keras.models import Sequential
-from keras.preprocessing.image import ImageDataGenerator, array_to_img,img_to_array,load_img
+from keras.preprocessing.image import ImageDataGenerator
 from keras.layers import Conv2D,MaxPooling2D, Flatten, Dense, Dropout
 import matplotlib.pyplot as plt
-
+import numpy as np
 import tensorflow as tf
 
 batch_size=16

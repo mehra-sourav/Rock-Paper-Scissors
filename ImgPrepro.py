@@ -1,4 +1,4 @@
-from keras.preprocessing.image import ImageDataGenerator, array_to_img,img_to_array,load_img
+from keras.preprocessing.image import ImageDataGenerator
 #Generating new images from existing images
 #train_datagen=ImageDataGenerator(rotation_range=60,width_shift_range=0.2,height_shift_range=0.2,shear_range=0.2,zoom_range=0.2,horizontal_flip=True,fill_mode='nearest',rescale=1./255)
 
@@ -9,11 +9,11 @@ test_datagen = ImageDataGenerator(rescale=1./255)
 valid_datagen= ImageDataGenerator(rescale=1./255)
 
 def Train():
-    train_set=train_datagen.flow_from_directory('Operation2/Train',target_size=(200,200),color_mode="grayscale",batch_size=16,shuffle=True,class_mode='sparse',seed=7) #class_mode="categorical" for 2d onehot encoded labels
+    train_set=train_datagen.flow_from_directory('Operation2/Train',target_size=(150,150),color_mode="grayscale",batch_size=16,shuffle=True,class_mode='sparse',seed=7) #class_mode="categorical" for 2d onehot encoded labels
     return train_set
 
 def Valid():
-  valid_set = valid_datagen.flow_from_directory('Operation2/Valid',target_size=(200,200),color_mode="grayscale",batch_size=16,shuffle=True,class_mode='sparse',seed=13) #class_mode="categorical" for 2d onehot encoded labels
+  valid_set = valid_datagen.flow_from_directory('Operation2/Valid',target_size=(150,150),color_mode="grayscale",batch_size=16,shuffle=True,class_mode='sparse',seed=13) #class_mode="categorical" for 2d onehot encoded labels
   return valid_set
 
 def Test():
