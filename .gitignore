@@ -1,2 +1,23 @@
+.git
 .idea
+__pycache__
+Dataset
+Models
+Operation
+Operation2
+Operation3
+Pictures
+preview
+preview2
+venv 
+Working Models
+.gitignore
+.gitignore.swp
+new3.py
+zx.py
 Projects
+*.h5
+*.jpg
+*.jpeg
+*.csv
+
