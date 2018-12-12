@@ -20,8 +20,8 @@ class Game(QDialog):
     #STARTING WEBCAM
     def start_webcam(self):
         self.capture=cv2.VideoCapture(0)
-        self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT,330)
-        self.capture.set(cv2.CAP_PROP_FRAME_WIDTH,330)
+        self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT,300)
+        self.capture.set(cv2.CAP_PROP_FRAME_WIDTH,300)
 
 
         self.timer=QTimer(self)
