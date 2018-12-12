@@ -118,9 +118,9 @@
   <widget class="QLabel" name="CPUScore">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>130</x>
      <y>620</y>
-     <width>81</width>
+     <width>111</width>
      <height>21</height>
     </rect>
    </property>
@@ -136,9 +136,9 @@
   <widget class="QLabel" name="PlayerScore">
    <property name="geometry">
     <rect>
-     <x>900</x>
+     <x>790</x>
      <y>620</y>
-     <width>111</width>
+     <width>131</width>
      <height>21</height>
     </rect>
    </property>
@@ -154,9 +154,9 @@
   <widget class="QLabel" name="LiveVideoFeed">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>460</x>
      <y>330</y>
-     <width>121</width>
+     <width>301</width>
      <height>21</height>
     </rect>
    </property>
@@ -168,13 +168,16 @@
    <property name="text">
     <string>Live Video Feed</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLabel" name="CPUoutput">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>130</x>
      <y>650</y>
-     <width>231</width>
+     <width>171</width>
      <height>21</height>
     </rect>
    </property>
@@ -190,9 +193,9 @@
   <widget class="QLabel" name="Playeroutput">
    <property name="geometry">
     <rect>
-     <x>900</x>
+     <x>790</x>
      <y>650</y>
-     <width>171</width>
+     <width>181</width>
      <height>21</height>
     </rect>
    </property>
@@ -208,10 +211,10 @@
   <widget class="QLabel" name="Result">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>560</y>
-     <width>151</width>
-     <height>21</height>
+     <x>460</x>
+     <y>510</y>
+     <width>301</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -221,6 +224,9 @@
    </property>
    <property name="text">
     <string>Result:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

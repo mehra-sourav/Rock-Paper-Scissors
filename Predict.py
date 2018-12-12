@@ -4,15 +4,8 @@ from ImgPrepro import Valid,Train,Test
 import matplotlib.pyplot as plt
 from keras.preprocessing import image
 import pandas as pd
-
+import cv2
 model=load_model('ModelA.h5')#EModel20epoch,6convu6464finalconvu1024denseneurons,2310imgsrmspropsparselowdataugrescaleintrain.h5')
-
-
-#train=Train()
-#test=Test()
-#print(Train.class_indices)
-#fruit_indices=Train.class_indices
-
 
 #test_image=image.load_img('Operation3/Good/live.jpg',target_size=(150,150),color_mode='grayscale')
 #print(type(test_image))
@@ -22,17 +15,25 @@ model=load_model('ModelA.h5')#EModel20epoch,6convu6464finalconvu1024denseneurons
 ##plt.imshow(test_image)
 ##plt.show()
 
-def Prediction(playerimg):
-    pred_image=image.load_img(playerimg,target_size=(150,150),color_mode='grayscale')
-    plt.imshow(pred_image)
-    plt.show()
+def Prediction():#playerimg):
 
-    pred_image = image.img_to_array(pred_image)
+    playerimg=np.load('INPUTARRAY.npy')
+    #playerimg = cv2.cvtColor(playerimg, cv2.COLOR_BGR2GRAY)
+    pred_image = playerimg
+    pred_img = image.array_to_img(pred_image)
+    pred_img.save('INPUTIMAGE.jpg')
+
+    pred_image1=image.load_img('INPUTIMAGE.jpg',target_size=(150,150),color_mode='grayscale')
+    #plt.imshow(pred_image1)
+    #plt.show()
+
+    pred_image1 = image.img_to_array(pred_image1)
+    #print(type(pred_image))
     #print(pred_image.shape)
-    pred_image = np.expand_dims(pred_image, axis=0)
+    pred_image1 = np.expand_dims(pred_image1, axis=0)
     #print(test_image.shape)
 
-    result = model.predict(pred_image)
+    result = model.predict(pred_image1)
     prediction=None
     if result[0][0] == 1:
         prediction = "Paper"
@@ -45,7 +46,10 @@ def Prediction(playerimg):
         return prediction
 
 
+#print(type(test_image))
+#h=Prediction(1)
 
+#print(h)
 
 ##test_image=image.img_to_array(test_image)
 ##print(test_image.shape)
