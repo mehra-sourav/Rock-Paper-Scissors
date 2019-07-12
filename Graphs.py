@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy
 
 model=load_model('ModelA.h5')
-hist=model.history()
+'''hist=model.history()
 print(type(hist))
 
 # fix random seed for reproducibility
@@ -36,3 +36,5 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train', 'test'], loc='upper left')
 plt.show()
+'''
+model.summary()

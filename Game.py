@@ -1,15 +1,15 @@
 import sys,random,cv2,io
-from PyQt5.QtCore import QBuffer, QTimer
-from PyQt5.QtGui import QPixmap, QImage
+from PyQt5.QtCore import QBuffer, QTimer, QCoreApplication
+from PyQt5.QtGui import QPixmap, QImage,QColor
 from PyQt5.QtWidgets import QApplication,QDialog,QLabel
 from PyQt5.uic import loadUi
 import numpy as np
 from PIL import Image
 from Predict import Prediction
 
-Stone='CPU Hand Images/Stone.jpg'
-Paper='CPU Hand Images/Paper.jpg'
-Scissors='CPU Hand Images/Scissors.jpg'
+Stone='CPU Hand Images/New Stone.jpg'
+Paper='CPU Hand Images/New Paper.jpg'
+Scissors='CPU Hand Images/New Scissors.jpg'
 
 class Game(QDialog):
     CPUScore=0
@@ -20,6 +20,9 @@ class Game(QDialog):
         self.image=None
         self.start_webcam()
         self.Start.clicked.connect(self.stop_webcam)
+
+        # QUITING GAME
+        self.Quit.clicked.connect(self.close)
         #CPUScore = 0
         #PlayerScore = 0
         #self.CPUScore.setText("CPU Score:{}".format(CPUScore))
@@ -168,6 +171,12 @@ class Game(QDialog):
             self.PlayerScore.setText("Player Score: {}".format(Game.PlayerScore))
         elif CPUinput==Playerinput:
             self.Result.setText("Result:DRAW")
+        elif Playerinput==None:
+            self.Result.setText("Result:Player Input not Available")
+
+    #QUITING GAME
+    #def Quit(self):
+        #self.Quit.clicked.connect(self.QCoreApplication.instance().quit)
 
 
 

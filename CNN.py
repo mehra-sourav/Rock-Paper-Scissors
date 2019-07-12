@@ -7,8 +7,8 @@ import numpy as np
 import tensorflow as tf
 
 batch_size=16
-dataset_size=2310#150
-valid_size=889
+dataset_size=759
+valid_size=405
 
 #MODEL
 #Creating Sequential class object
@@ -50,7 +50,7 @@ classifier.add(Dropout(0.2))
 classifier.add(Dense(units=3,activation='softmax'))
 
 #Compiling model
-classifier.compile(optimizer = 'rmsprop', loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
+classifier.compile(optimizer = 'rmsprop', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 
 # Create callback for early stopping on validation loss. If the loss does
 # not decrease in two consecutive tries, stop training.
@@ -64,7 +64,7 @@ valid=Valid()
 hist=classifier.fit_generator(train,steps_per_epoch=dataset_size/batch_size,epochs=20,validation_data=valid,validation_steps=160/batch_size)
 
 
-classifier.save("EModel20epoch,6convu6464finalconvu1024denseneurons,2310imgsrmspropsparselowdataugrescaleintrain.h5")
+classifier.save("SegmentationSimplebgrndhighaug.h5")
 print("Model Saved")
 #print(type(hist))
 

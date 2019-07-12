@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>640</y>
+     <y>580</y>
      <width>181</width>
      <height>41</height>
     </rect>
@@ -227,6 +227,24 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Quit">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>640</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Exit</string>
    </property>
   </widget>
  </widget>

@@ -3,13 +3,16 @@ from keras.models import load_model
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+from Segment import ImgSegment
 from keras.models import Sequential
 
 layer_num=3
 filter_num=0
-model=load_model('EMode10epoch,6convu6464finalconvu1024denseneurons,2310imgsrmsproplowdataugrescaleintrain.h5')
+model=load_model('SegmentationSimplbgrnd.h5')
 
-test_img=cv2.imread('Operation3/Good/live.jpg')
+path='Operation3/Good/original.jpg'
+ImgSegment(path)
+test_img=cv2.imread("Threshinput.jpg")
 test_img=cv2.resize(test_img,(200,200))
 test_img=cv2.cvtColor(test_img,cv2.COLOR_BGR2GRAY)
 test_img=np.array(test_img)
